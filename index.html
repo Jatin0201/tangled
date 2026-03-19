@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Tangled Bookshelf</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#f9e0ff,#ffe8f4,#fff2cc);
+color:#4a2a63;
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:40px 20px;
+background:linear-gradient(90deg,#e3b3ff,#ffd6f0);
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+header h1{
+font-size:38px;
+margin-bottom:5px;
+}
+
+header p{
+font-style:italic;
+}
+
+/* LANTERNS */
+
+.lantern{
+position:fixed;
+bottom:-100px;
+width:40px;
+height:60px;
+background:radial-gradient(circle,#fff7b2,#ffd94d);
+border-radius:10px;
+opacity:0.8;
+animation:floatLantern 15s linear infinite;
+}
+
+@keyframes floatLantern{
+from{transform:translateY(0);}
+to{transform:translateY(-110vh);}
+}
+
+/* GENRE SECTION */
+
+.genre{
+margin:35px auto;
+padding:25px;
+border-radius:15px;
+background:white;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+width:90%;
+max-width:1100px;
+}
+
+.genre-header{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:15px;
+flex-wrap:wrap;
+}
+
+.genre-header img{
+width:70px;
+}
+
+.genre h2{
+margin:0;
+}
+
+/* BOOK GRID */
+
+.books{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+}
+
+.book{
+background:#fff5fb;
+padding:12px;
+border-radius:10px;
+transition:0.3s;
+position:relative;
+font-size:15px;
+}
+
+.book:hover{
+transform:scale(1.05);
+background:#ffe3f7;
+}
+
+.audio{
+position:absolute;
+right:10px;
+top:10px;
+}
+
+/* CURRENT READING */
+
+.current{
+background:#f3e9ff;
+border:2px solid #d7b6ff;
+}
+
+/* TO READ SECTION */
+
+.to-read{
+background:#fff9dc;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+font-size:14px;
+color:#6a4b7a;
+}
+
+/* MOBILE */
+
+@media (max-width:600px){
+
+header h1{
+font-size:28px;
+}
+
+.genre{
+margin:25px 10px;
+padding:20px;
+}
+
+.books{
+grid-template-columns:repeat(2,1fr);
+}
+
+.genre-header{
+justify-content:center;
+text-align:center;
+}
+
+.genre-header img{
+width:60px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+<h1>☀️ My Tangled Bookshelf 🌸</h1>
+<p>"Venture outside your comfort zone. The rewards are worth it." – Rapunzel</p>
+</header>
+
+
+<!-- CURRENTLY READING -->
+
+<section class="genre current">
+
+<div class="genre-header">
+<img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Rapunzel_Tangled.png">
+<h2>Currently Reading 📖</h2>
+</div>
+
+<div class="books">
+
+<div class="book">King of Pride</div>
+<div class="book">Men Without Women</div>
+
+</div>
+
+</section>
+
+
+<!-- RAPUNZEL ROMANCE -->
+
+<section class="genre">
+
+<div class="genre-header">
+<img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Rapunzel_Tangled.png">
+<h2>Rapunzel's Romance Tower 💕</h2>
+</div>
+
+<div class="books">
+
+<div class="book">Twisted Love</div>
+<div class="book">Twisted Games</div>
+<div class="book">Twisted Lies</div>
+<div class="book">The Love Hypothesis</div>
+<div class="book">The Spanish Love Deception <span class="audio">🎧</span></div>
+<div class="book">The American Roommate Experiment <span class="audio">🎧</span></div>
+<div class="book">Love, Theoretically <span class="audio">🎧</span></div>
+<div class="book">Better Than The Movies <span class="audio">🎧</span></div>
+<div class="book">Dating Dr Dil</div>
+<div class="book">It Ends With Us <span class="audio">🎧</span></div>
+<div class="book">It Starts With Us <span class="audio">🎧</span></div>
+<div class="book">Seven Husbands of Evelyn Hugo</div>
+
+</div>
+</section>
+
+
+<!-- EUGENE -->
+
+<section class="genre">
+
+<div class="genre-header">
+<img src="https://upload.wikimedia.org/wikipedia/en/1/16/Flynn_Rider_Tangled.png">
+<h2>Eugene's Adventure & Mystery ⚔️</h2>
+</div>
+
+<div class="books">
+
+<div class="book">Verity</div>
+<div class="book">The Housemaid</div>
+<div class="book">One Of Us Is Lying</div>
+<div class="book">The Guest List</div>
+<div class="book">The Silent Patient</div>
+<div class="book">Haunting Adeline 1 <span class="audio">🎧</span></div>
+<div class="book">Haunting Adeline 2 <span class="audio">🎧</span></div>
+<div class="book">The Good Girl Trilogy <span class="audio">🎧</span></div>
+
+</div>
+</section>
+
+
+<!-- PASCAL -->
+
+<section class="genre">
+
+<div class="genre-header">
+<img src="https://upload.wikimedia.org/wikipedia/en/5/5a/Pascal_Tangled.png">
+<h2>Pascal's Wisdom Garden 🌿</h2>
+</div>
+
+<div class="books">
+
+<div class="book">Atomic Habits</div>
+<div class="book">Ikigai</div>
+<div class="book">The Subtle Art of Not Giving a F*ck</div>
+<div class="book">Read People Like a Book <span class="audio">🎧</span></div>
+<div class="book">How To Win Friends and Influence People</div>
+<div class="book">The Mountain Is You</div>
+<div class="book">The Art of Seduction <span class="audio">🎧</span></div>
+<div class="book">Do Epic Shit <span class="audio">🎧</span></div>
+<div class="book">48 Laws of Power <span class="audio">🎧</span></div>
+<div class="book">Rich Dad Poor Dad <span class="audio">🎧</span></div>
+<div class="book">The Art of Witty Banter <span class="audio">🎧</span></div>
+<div class="book">Surrounded by Idiots <span class="audio">🎧</span></div>
+<div class="book">The Art of Being Alone <span class="audio">🎧</span></div>
+
+</div>
+</section>
+
+
+<!-- GOTHEL -->
+
+<section class="genre">
+
+<div class="genre-header">
+<img src="https://upload.wikimedia.org/wikipedia/en/e/e7/Mother_Gothel_Tangled.png">
+<h2>Mother Gothel's Forbidden Library 🖤</h2>
+</div>
+
+<div class="books">
+
+<div class="book">Mein Kampf</div>
+<div class="book">Why I Killed Gandhi</div>
+<div class="book">A Little Life</div>
+
+</div>
+</section>
+
+
+<!-- CLASSICS -->
+
+<section class="genre">
+
+<div class="genre-header">
+<img src="https://upload.wikimedia.org/wikipedia/en/1/16/Flynn_Rider_Tangled.png">
+<h2>Kingdom Classics 📜</h2>
+</div>
+
+<div class="books">
+
+<div class="book">Oliver Twist</div>
+<div class="book">Animal Farm</div>
+<div class="book">A Scarlet Letter</div>
+<div class="book">The Alchemist <span class="audio">🎧</span></div>
+<div class="book">The Kite Runner</div>
+<div class="book">A Thousand Splendid Suns</div>
+<div class="book">The Book Thief</div>
+<div class="book">Men Without Women</div>
+<div class="book">The Palace of Illusions</div>
+
+</div>
+</section>
+
+
+<!-- STUDY -->
+
+<section class="genre">
+
+<div class="genre-header">
+<img src="https://upload.wikimedia.org/wikipedia/en/5/5a/Pascal_Tangled.png">
+<h2>Royal Study Room 📚</h2>
+</div>
+
+<div class="books">
+
+<div class="book">Kuby Immunology</div>
+<div class="book">Lehninger Biochemistry</div>
+<div class="book">Bhagwat Geeta for GenZ</div>
+<div class="book">NCERT Economics</div>
+<div class="book">NCERT History</div>
+
+</div>
+</section>
+
+
+<!-- TO READ -->
+
+<section class="genre to-read">
+
+<div class="genre-header">
+<img src="https://upload.wikimedia.org/wikipedia/en/1/16/Flynn_Rider_Tangled.png">
+<h2>Lantern Wish List ✨</h2>
+</div>
+
+<div class="books">
+
+<div class="book">Why Am I an Atheist — Bhagat Singh</div>
+<div class="book">Psychology of Money</div>
+
+</div>
+</section>
+
+
+<footer>
+Made with ☀️ lanterns, flowers & books
+</footer>
+
+
+<script>
+
+/* FLOATING LANTERNS */
+
+function createLantern(){
+
+const lantern=document.createElement("div")
+lantern.className="lantern"
+
+lantern.style.left=Math.random()*100+"vw"
+lantern.style.animationDuration=(10+Math.random()*10)+"s"
+
+document.body.appendChild(lantern)
+
+setTimeout(()=>lantern.remove(),20000)
+
+}
+
+setInterval(createLantern,1500)
+
+</script>
+
+</body>
+</html>
